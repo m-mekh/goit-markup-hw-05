@@ -6,6 +6,7 @@
   --hover-focus-color: #404bbf;
   --text-subscribe-color: #434455;
   --item-title-color: #2e2f42;
+  --transition-dur-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -266,6 +267,74 @@ img {
 
 .hero-btn:active {
   color: #2e2f42;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(46, 47, 66, 0.4);
+  z-index: 100;
+  transition: opacity var(--transition-dur-func), visibility var(--transition-dur-func);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 408px;
+  height: 576px;
+  background-color: #fcfcfc;
+
+  border-radius: 4px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-hero-btn {
+  display: flex;
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #2e2f42;
+  background: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: border-color var(--transition-dur-func);
+}
+
+.modal-hero-btn:hover .icon-modal-btn,
+.modal-hero-btn:focus .icon-modal-btn {
+  fill: currentColor;
+}
+
+.modal-hero-btn:hover,
+.modal-hero-btn:focus {
+  border-color: #4d5ae5;
+  background-color: #4d5ae5;
+  color: #e7e9fc;
+}
+
+.icon-modal-btn {
+  width: 8px;
+  height: 8px;
+  transition: fill var(--transition-dur-func);
 }
 
 .about {
