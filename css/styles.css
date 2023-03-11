@@ -145,12 +145,13 @@ img {
   line-height: 1.5;
   color: #2e2f42;
   display: block;
-  padding: 24px 0;
-  transition: color var(--transition-dur-func);
+
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .current {
-  color: #2e2f42;
+  color: #404bbf;
 }
 
 .current::after {
@@ -340,7 +341,6 @@ img {
 .icon-modal-btn {
   width: 8px;
   height: 8px;
-  transition: fill var(--transition-dur-func);
 }
 
 .about {
@@ -523,6 +523,7 @@ img {
   width: 40px;
   height: 40px;
 }
+
 .team-social-link {
   display: flex;
   justify-content: center;
@@ -644,8 +645,8 @@ img {
   padding: 12px 24px;
   border-radius: 4px;
   gap: 24px;
-  transition: border-color var(--transition-dur-func);
   transition: color var(--transition-dur-func);
+  transition: background-color var(--transition-dur-func);
 }
 
 .filter-btn:not(:last-child) {
