@@ -262,6 +262,7 @@ img {
   flex-direction: row;
   text-align: center;
   border: none;
+  transition: background-color var(--transition-dur-func);
 }
 
 .hero-btn:focus,
@@ -530,6 +531,7 @@ img {
   height: 100%;
   border-radius: 50%;
   background-color: rgba(77, 90, 229, 1);
+  transition: background-color var(--transition-dur-func);
 }
 
 .team-social-link:is(:hover, :focus) {
@@ -589,10 +591,13 @@ img {
   border: 1px solid #8e8f99;
   border-radius: 4px;
   color: #8e8f99;
+  transition: border-color var(--transition-dur-func);
+  transition: color var(--transition-dur-func);
 }
 
 .customers-item-img {
   fill: currentColor;
+  transition: fill var(--transition-dur-func);
 }
 
 .customers-item-link:is(:hover, :focus) {
@@ -639,6 +644,8 @@ img {
   padding: 12px 24px;
   border-radius: 4px;
   gap: 24px;
+  transition: border-color var(--transition-dur-func);
+  transition: color var(--transition-dur-func);
 }
 
 .filter-btn:not(:last-child) {
@@ -845,6 +852,7 @@ img {
   height: 100%;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
+  transition: background-color var(--transition-dur-func);
 }
 
 .footer-social-link:is(:hover, :focus) {
